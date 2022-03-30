@@ -1,0 +1,26 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { CookiesProvider } from 'react-cookie';
+import App from './components/App';
+import AppProvider from './AppProvider';
+import reportWebVitals from './reportWebVitals';
+import './fonts/Rubik.ttf';
+import './style/index.css';
+import './style/tailwind.css';
+import 'animate.css';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <AppProvider>
+      <CookiesProvider>
+        <App className="font-face-gm"/>
+      </CookiesProvider>
+    </AppProvider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
